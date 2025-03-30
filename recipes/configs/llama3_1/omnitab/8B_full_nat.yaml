@@ -30,6 +30,7 @@ tokenizer:
 dataset:
   _component_: torchtune.datasets.text_completion_dataset
   source: /home/kyuminkim/datasets/table/pieta/finetune/omnitab/nat
+  column: 'input'
   packed: False  # True increases speed
 seed: null
 shuffle: True
