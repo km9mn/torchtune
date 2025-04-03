@@ -64,7 +64,7 @@ loss:
   _component_: torchtune.modules.loss.CEWithChunkedOutputLoss
 max_steps_per_epoch: null
 clip_grad_norm: null
-compile: True  # torch.compile the model + loss, True increases speed + decreases memory
+compile: False  # torch.compile the model + loss, True increases speed + decreases memory
 optimizer_in_bwd: True  # True saves memory. Requires gradient_accumulation_steps=1
 gradient_accumulation_steps: 1  # Use to increase effective batch size
 
@@ -73,7 +73,7 @@ device: cuda
 
 # Memory management
 enable_activation_checkpointing: True  # True reduces memory
-enable_activation_offloading: False  # True reduces memory
+enable_activation_offloading: True  # True reduces memory
 custom_sharded_layers: ['tok_embeddings', 'output']  # Layers to shard separately (useful for large vocab size models). Lower Memory, but lower speed.
 
 # Reduced precision
