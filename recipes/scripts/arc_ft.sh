@@ -1,0 +1,1 @@
+tune run --nnodes 1 --nproc_per_node 4 lora_finetune_distributed --config /home/kyumin/project/table/torchtune/recipes/configs/mistral/7B_lora_arc_train.yaml

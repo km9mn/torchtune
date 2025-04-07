@@ -1,0 +1,1 @@
+tune run --nproc_per_node 4 full_finetune_distributed --config /home/kyumin/project/table/torchtune/recipes/configs/llama3_1/omnitab/8B_full_wtq.yaml
